@@ -20,7 +20,7 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased bg-cover bg-top bg-fixed" style="background-image:url('https://images.unsplash.com/photo-1551554781-c46200ea959d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80')">
+    <body class="font-sans antialiased bg-cover bg-top bg-fixed" style="background-image:url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')">
         <x-jet-banner />
 
         <div class="min-h-screen ">
@@ -29,7 +29,7 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="shadow">
-                    <div class=" px-4 mx-auto py-6 px-4 sm:px-6 lg:px-8 text-right bg-cover bg-top" style="background-image:url('https://images.unsplash.com/photo-1470811976196-8ee4fa278c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80')">
+                    <div class=" px-4 mx-auto py-6 px-4 sm:px-6 lg:px-8 text-right bg-cover bg-top fixed w-full"  style="background-image:url('https://images.unsplash.com/photo-1470811976196-8ee4fa278c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80')">
                         {{ $header }}
                     </div>
                 </header>

@@ -7,36 +7,35 @@
 <div class="menu z-20">
   <div class="menu-inner">
     <ul class="menu-nav">
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+      <li class="menu-nav-item"><a class="menu-nav-link" href="{{route('home')}}"><span>
             <div>PORTADA</div>
           </span></a></li>
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+          <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
+      <li class="menu-nav-item"><a class="menu-nav-link" href="{{route('lost')}}"><span>
             <div>SOBRE MÍ</div>
           </span></a></li>
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+          <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
+      <li class="menu-nav-item"><a class="menu-nav-link" href="{{route('lost')}}"><span>
             <div>SERVICIOS</div>
           </span></a></li>
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
+          <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
+      <li class="menu-nav-item"><a class="menu-nav-link" href="{{route('lost')}}"><span>
             <div>PROYECTOS</div>
           </span></a></li>
+          <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
     </ul>
     <div class="gallery">
       <div class="title">
         <h1>PROYECTOS DESTACADOS</h1>
       </div>
       <div class="images">
-        <a class="image-link" href="#">
-          <div class="image" data-label="Star"><img src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" alt=""></div>
-        </a>
-        <a class="image-link" href="#">
-          <div class="image" data-label="Sun"><img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" alt=""></div>
-        </a>
-        <a class="image-link" href="#">
-          <div class="image" data-label="Tree"><img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt=""></div>
-        </a>
-        <a class="image-link" href="#">
-          <div class="image" data-label="Sky"><img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" alt=""></div>
-        </a>
+          @foreach (App\Models\Project::paginate(4) as $project)
+          <a class="image-link" href="{{$project->link}}" target="_blank">
+            <div class="image" data-label="{{$project->shortname}}"><img src="{{$project->image}}" alt="{{$project->shortname}}"></div>
+          </a>
+          @endforeach
+       
+        
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12 space-y-8">
+    <div class="pb-12 pt-16 lg:pt-20 space-y-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-xl sm:rounded-lg sm:mx-2 rounded-xl">
                 @livewire('banner',

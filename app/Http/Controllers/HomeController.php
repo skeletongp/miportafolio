@@ -12,4 +12,8 @@ class HomeController extends Controller
         $categories=Category::get();
        return view('dashboard', compact('categories'));
     }
+    public function lost()
+    {
+       return view('lostpage');
+    }
 }
