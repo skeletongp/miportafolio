@@ -111,6 +111,7 @@ p {
   overflow-x: hidden;
   visibility: hidden;
   transition: 0.3s ease-in-out;
+  z-index: 40;
 }
 @media screen and (max-width: 750px) {
   .menu {

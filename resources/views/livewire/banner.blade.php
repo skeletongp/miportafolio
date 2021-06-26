@@ -8,7 +8,7 @@
 
     </style>
     <div>
-        <div class="bannerFondo bg-white bg-left-top bg-auto bg-repeat-x"
+        <div class="bannerFondo bg-white bg-left-top bg-cover bg-repeat-x"
             style="background-image: url('https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')">
         </div>
 
@@ -32,7 +32,7 @@
                                 <div class="space-y-5">
                                     <div class="font-bold text-xl mb-2">Digitador</div>
                                     <p class="text-gray-700 text-base">
-                                        Con domino de Microsoft Office (Word, Excel, Powerpoint, Visio) y numerosas
+                                        Con destrezas en el manejo de Microsoft Office (Word, Excel, Powerpoint, Visio) y numerosas
                                         herramientas tecnológicas.
                                     </p>
                                 </div>
