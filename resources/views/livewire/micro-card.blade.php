@@ -4,7 +4,7 @@
             <img src="{{$image}}" alt="imagen" class="w-16 h-12 ml-1">
         </div>
         <div class="w-8/12 rounded-r-xl flex-1 justify-center items-center h-full pr-2">
-            <h3 class="font-bold">Level</h3>
+            <h3 class="font-bold">{{$title}}</h3>
             <div class="w-24 mx-auto flex">
                @for ($i = 0; $i < $level; $i++)
                <span class="fas fa-star text-yellow-300"></span>

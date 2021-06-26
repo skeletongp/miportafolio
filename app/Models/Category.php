@@ -10,6 +10,6 @@ class Category extends Model
     use HasFactory;
     public function skills()
     {
-        return $this->hasMany(Skill::class);
+        return $this->hasMany(Skill::class)->orderBy('level','desc');
     }
 }
