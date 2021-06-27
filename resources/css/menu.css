@@ -231,3 +231,14 @@ p {
   height: 250px;
   transform: translateY(102%);
 }
+.tabAnim {
+  z-index: -9;
+}
+
+#option0:checked ~ div {
+  --tw-translate-x: 0%;
+}
+
+#option1:checked ~ div {
+  --tw-translate-x: 100%;
+}

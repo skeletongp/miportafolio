@@ -17,6 +17,7 @@
                 ])
             </div>
         </div>
+            @livewire('carrusel', ['object'=>App\Models\Skill::all()])
         <div class="max-w-7xl mx-auto lg:grid grid-flow-row grid-cols-3 grid-rows-1 gap-4 text-center ">
 
             @foreach ($categories as $category)

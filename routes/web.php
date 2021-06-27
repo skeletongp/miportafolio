@@ -18,6 +18,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/services/{type}', [HomeController::class, 'services_search'])->name('services_search');
+Route::get('/service/{show}', [HomeController::class, 'services_show'])->name('services_show');
 Route::get('/lost', [HomeController::class, 'lost'])->name('lost');
 
 
