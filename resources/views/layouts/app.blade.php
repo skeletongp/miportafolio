@@ -44,14 +44,7 @@
                 <div class=" px-4 mx-auto py-6 px-4 sm:px-6 lg:px-8 text-right bg-cover bg-top fixed w-full z-30 flex justify-end"
                     style="background-image:url('https://images.unsplash.com/photo-1470811976196-8ee4fa278c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80')">
                     {{ $header }}
-                    @if (Auth::check())
-                    <form action="{{route('logout')}}" method="POST"></form>
-                    @csrf
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                               this.closest('form').submit();">
-                            {{ __('Salir') }}
-                        </a>
-                    @endif
+                   
                 </div>
             </header>
         @endif
@@ -83,7 +76,25 @@
                     title="LinkedInd">
                     <i class="fas fa-blog mr-0" aria-hidden="true"></i> <span class="blog-text">Blog</span>
                 </a>
+                
             </div>
+
+            @if (Auth::check())
+            <div class="fixed left-4 inset-y-1/3  h-16  blog-div z-40">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+    
+                    <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                        <span class="fas fa-sign-out-alt text-2xl"></span>
+                    </button>
+                </form>
+            </div>
+            @else
+            <div class="fixed left-4 inset-y-1/3  h-16  blog-div z-40">
+               <a href="{{url('login')}}">
+                <span class="fas fa-sign-in-alt text-2xl"></span></a>
+            </div>
+            @endif
         </main>
     </div>
 

@@ -1,1 +1,8 @@
-window.addEventListener("load",(function(){}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!******************************!*\
+  !*** ./resources/js/menu.js ***!
+  \******************************/
+window.addEventListener('load', function () {});
+/******/ })()
+;

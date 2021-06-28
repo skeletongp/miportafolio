@@ -25,7 +25,7 @@
                 <div class="p-2 sm:p-10 text-center cursor-pointer">
                     <div
                         class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-blue-50">
-                        <div class="">
+                        <div class="space-y-10">
                             <i class="fa fa-keyboard" style="font-size:48px;"></i>
 
                             <div class="px-6 py-4">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="p-2 sm:p-10 text-center cursor-pointer ">
+                <div class="p-2 sm:p-10 text-center cursor-pointer ">   
                     <div
                         class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-blue-50 ">
                         <div class="space-y-10">

@@ -4,11 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class BlogCard extends Component
+class PostCard extends Component
 {
     public $post;
     public function render()
     {
-        return view('livewire.blog-card');
+        return view('livewire.post-card');
     }
 }

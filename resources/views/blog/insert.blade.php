@@ -15,7 +15,7 @@
                 <div class="lg:flex">
                     <div class="space-y-2 lg:w-2/3 lg:mx-2 mb-4 lg:mb-1">
                         <x-jet-label for="title" class="font-bold lg:text-xl">Título del post </x-jet-label>
-                        <x-jet-input type="text" name="title" id="title" class="w-full"></x-jet-input>
+                        <x-jet-input type="text" name="title" id="title" class="w-full" maxlength="100"></x-jet-input>
                         <x-jet-input-error for="title"></x-jet-input-error>
                     </div>
                     <div class="space-y-2 lg:w-1/3 lg:mx-2 mb-4 lg:mb-1">
@@ -23,6 +23,11 @@
                         <x-jet-input type="text" name="slug" id="slug" class="w-full" readonly></x-jet-input>
                         <x-jet-input-error for="slug"></x-jet-input-error>
                     </div>
+                </div>
+                <div class="mt-3 lg:mx-2 mb-4 lg:mb-4">
+                    <x-jet-label for="extract" class="font-bold lg:text-xl">Resumen</x-jet-label>
+                    <textarea class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full" name="extract"></textarea>
+                    <x-jet-input-error for="extract" class="mt-2"></x-jet-input-error>
                 </div>
                 <div class="mt-3 lg:mx-2 mb-4 lg:mb-4">
                     <x-jet-label for="description" class="font-bold lg:text-xl">Contenido del post</x-jet-label>
@@ -44,8 +49,11 @@
                         <x-jet-input-error for="topic_id"></x-jet-input-error>
                     </div>
                     <div class=" lg:w-2/4 lg:mx-2 mb-4 lg:mb-1">
-                        <x-jet-label for="slug" class="font-bold lg:text-xl">Keywords</x-jet-label>
-                        @livewire('multiselect', ['object' => $labels, 'input_id'=>'keys', 'name'=>'keys'])
+                        <div class="flex items-center space-x-2">
+                            <x-jet-label for="slug" class="font-bold lg:text-xl">Keywords</x-jet-label>
+                            @livewire('new-label')
+                        </div>
+                        @livewire('multiselect', ['input_id'=>'keys', 'name'=>'keys'])
                         <x-jet-input-error for="keys"></x-jet-input-error>
                         <input type="hidden" name="is_active" value="0" class="form-control" id="is_active">
 
@@ -83,7 +91,7 @@
 
             </form>
         </div>
-        <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+        <<script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
         <script src="{{ asset('stringtoslug/jquery.stringToSlug.js') }}"></script>
 
         <script type="text/javascript">

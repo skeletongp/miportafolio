@@ -167,7 +167,7 @@ return [
         'slug'=>"Slug",
         'topic_id'=>"Categoría",
         'keys'=>"Keywords",
-        'fecha_recogida'=>"Fecha de Recogida",
+        'extract'=>"Resumen",
     ],
 
 ];

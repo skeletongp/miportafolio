@@ -1,28 +1,24 @@
 <div>
-    <a class="block rounded w-full lg:flex mb-10" href="./blog-single-1.html">
-        <div class="h-48 lg:w-48 flex-none bg-cover text-center overflow-hidden opacity-75"
-            style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')"
-            title="deit is very important">
-        </div>
-        <div class="bg-white rounded px-4 flex flex-col justify-between leading-normal">
-            <div>
-                <div class="mt-3 md:mt-0 text-gray-700 font-bold text-2xl mb-2">
-                    Aliquam venenatis nisl id purus rhoncus, in efficitur sem hendrerit.
-                </div>
-                <p class="text-gray-700 text-base">
-                    Duis euismod est quis lacus elementum, eu laoreet dolor consectetur.
-                    Pellentesque sed neque vel tellus lacinia elementum. Proin consequat ullamcorper
-                    eleifend.
-                </p>
+    <div class="max-w-6xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md mt-4 bg-blue-100 bg-opacity-40">
+
+        <div>
+            <div class="flex items-center justify-between"><span
+                    class="font-light text-gray-600">{{ $post->updated_at }}</span><a
+                    href="{{ route('category', ['category' => $post->category]) }}"
+                    class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">{{$post->category->title}}</a>
             </div>
-            <div class="flex mt-3">
-                <img src="https://randomuser.me/api/portraits/men/86.jpg"
-                    class="h-10 w-10 rounded-full mr-2 object-cover" />
-                <div>
-                    <p class="font-semibold text-gray-700 text-sm capitalize"> eduard franz </p>
-                    <p class="text-gray-600 text-xs"> 14 Aug </p>
-                </div>
+            <div class="mt-2"><a href="{{ route('show', ['post' => $post]) }}" class="text-2xl font-bold text-gray-700 hover:underline">{{$post->title}}</a>
+                <p class="mt-2 text-gray-900">{{ $post->extract }}</p>
+            </div>
+            <div class="flex items-center justify-between mt-4 text-xl"><a href="{{ route('show', ['post' => $post]) }}"
+                    class="text-blue-800 font-bold hover:underline">Leer post</a>
+                <div><span class="flex items-center"><img
+                            src="https://res.cloudinary.com/dboafhu31/image/upload/v1624813664/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512_djffio.png"
+                            alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                        <h1 class="font-bold text-gray-700 select-none">{{ $post->autor->name }}</h1>
+                    </span></div>
             </div>
         </div>
-    </a>
+    </div>
+
 </div>

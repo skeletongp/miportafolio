@@ -7,7 +7,7 @@
                 <div class="bg-white shadow-xl overflow-hidden rounded-xl pb-8 px-8">
                     <div class="border-t border-gray-200 text-center pt-8">
                         <h1 class="text-5xl lg:text-9xl font-bold text-indog-800">404</h1>
-                        <h1 class="text-4xl lg:text-6xl font-bold py-8">Lo sentimos, página no encontrada</h1>
+                        <h1 class="text-4xl lg:text-6xl font-bold py-8">Lo sentimos, no se ha encontrado contenido</h1>
                         <p class="text-xl lg:text-2xl pb-8  font-medium">Es posible que te hayas perdido, o que esta página
                             esté en desarrollo.</p>
                         <a href="{{ route('home') }}"

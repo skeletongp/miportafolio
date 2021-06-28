@@ -6,7 +6,7 @@
                 @foreach ($object as $obj)
                 <div class="slide  flex items-center mx-8 mt-4">
                     <img src="{{$obj->image}}" class="w-24" alt="" />
-                    <h2 class="ml-2 font-bold uppercase">{{$obj->title}}</h2>
+                    <h2 class="ml-2 font-bold uppercase text-xs">{{$obj->title}}</h2>
                 </div>
                 @endforeach
                 

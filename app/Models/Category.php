@@ -12,4 +12,8 @@ class Category extends Model
     {
         return $this->hasMany(Skill::class)->orderBy('level','desc');
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

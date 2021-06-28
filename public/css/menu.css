@@ -242,3 +242,9 @@ p {
 #option1:checked ~ div {
   --tw-translate-x: 100%;
 }
+.jetstream-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+}

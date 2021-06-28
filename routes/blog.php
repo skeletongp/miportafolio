@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [BlogController::class, 'index'])->name('blog');
-Route::middleware(['auth:sanctum', 'verified'])->get('/insert', [BlogController::class, 'insert'])->name('insert');
+Route::get('/{category}', [BlogController::class, 'category'])->name('category');
+Route::get('/show/{post}', [BlogController::class, 'show'])->name('show');
+Route::middleware(['auth:sanctum'])->get('/insert', [BlogController::class, 'insert'])->name('insert');
 Route::post('/search',[BlogController::class,'search'])->name('post_search');
 Route::post('/store',[BlogController::class,'store'])->name('post_store');
 Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.image-upload');

@@ -2,8 +2,7 @@
   <!-- component -->
 <!-- This is an example component -->
 <div>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+ 
 
     <style>
         [x-cloak] {
