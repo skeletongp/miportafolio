@@ -14,7 +14,7 @@ class AddExtractToPostTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('extract')->after('user_id');
+            $table->text('extract')->after('user_id');
         });
     }
 

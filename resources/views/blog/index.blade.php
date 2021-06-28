@@ -19,6 +19,7 @@
         Blog
     @endslot
     <div class="pt-16 lg:pt-24 space-y-2 h-full flex-1 flex-1 justify-center w-full">
+        
         <!-- component -->
         <div class="max-w-screen-2xl mx-auto">
            @if ($posts->count())
@@ -123,7 +124,7 @@
             <!-- footer -->
             @if (Auth::check())
                 <a href="{{ route('insert') }}"
-                    class="w-12 h-12 rounded-full bg-red-500 fixed right-2 inset-y-1/2 flex items-center justify-center text-2xl z-30">
+                    class="w-8 h-8 rounded-full bg-red-500 fixed right-2 inset-y-3/4 flex items-center justify-center text-xl z-30">
                     <span class="fas fa-plus text-white"></span>
                 </a>
             @endif

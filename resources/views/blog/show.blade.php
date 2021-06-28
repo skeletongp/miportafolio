@@ -19,6 +19,13 @@
         Blog
     @endslot
     <div class="pt-16 lg:pt-24 space-y-2 h-full flex-1 flex-1 justify-center w-full">
+        
+            @slot('og')
+            <meta property="og:image" content="{{ $post->image }}">
+            <meta property="og:title" content="{{$post->title}}" />
+            <meta property="og:description" content="{{$post->extract}}" />
+            @endslot
+      
         <!-- component -->
         <div class="max-w-screen-2xl mx-auto">
            <main class="mt-10">
@@ -72,8 +79,12 @@
             <!-- footer -->
             @if (Auth::check())
                 <a href="{{ route('insert') }}"
-                    class="w-12 h-12 rounded-full bg-red-500 fixed right-2 inset-y-1/2 flex items-center justify-center text-2xl z-30">
+                    class="w-8 h-8 rounded-full bg-red-500 fixed right-2 inset-y-3/4 flex items-center justify-center text-xl z-30">
                     <span class="fas fa-plus text-white"></span>
+                </a>
+                <a href="{{route('update',['post'=>$post])}}"
+                    class="w-8 h-8 rounded-full bg-blue-500 fixed right-2 inset-y-2/4 flex items-center justify-center text-xl z-30">
+                    <span class="fas fa-pen text-white"></span>
                 </a>
             @endif
         </div>

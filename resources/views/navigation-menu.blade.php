@@ -24,7 +24,7 @@
                     </span></a></li>
             <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
 
-                    <li class="menu-nav-item"><a class="menu-nav-link" href="{{ route('blog') }}"><span>
+                    <li class="menu-nav-item"><a class="menu-nav-link uppercase" href="{{ route('blog') }}"><span>
                         <div>Blog</div>
                     </span></a></li>
             <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>

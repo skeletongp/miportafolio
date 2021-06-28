@@ -7,10 +7,17 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <meta property="og:site_name" content="Ismael Digitador" />
+    @if (isset($og))
+    {{$og}}
+    
+    @else
     <meta property="og:image" content="{{ asset('logo.png') }}">
     <meta property="og:title" content="Ismael Digitador" />
+    <meta property="og:description" content="Digitador profesional y asesor académico, con dominio en programación y manejo de múltiples herramientas tecnológicas. Consejos para la productividad" />
+    @endif
+    
     <meta property="og:url" content="http://ismaeldigitador.com/">
-    <meta property="og:type" content="educación" />
+    <meta property="og:type" content="educacion" />
     <title>{{ $title . ' | Ismael Digitador' }}</title>
 
     <!-- Fonts -->
@@ -70,7 +77,7 @@
                     <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
                 </a>
             </div>
-            <div class="fixed left-1 inset-y-1/2 blog-div z-20">
+            <div class="fixed right-1 top-24 lg:top-28 blog-div z-20">
                 <a href="{{ route('blog') }}"
                     class="tracking-wider text-red-600 bg-white border-2 border-blue-600 px-1 py-1 text-xl lg:text-2xl rounded leading-loose mx-2 font-bold"
                     title="LinkedInd">
@@ -80,7 +87,7 @@
             </div>
 
             @if (Auth::check())
-            <div class="fixed left-4 inset-y-1/3  h-16  blog-div z-40">
+            <div class="fixed right-4 inset-y-1/3  h-16  blog-div z-40">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
     
@@ -90,7 +97,7 @@
                 </form>
             </div>
             @else
-            <div class="fixed left-4 inset-y-1/3  h-16  blog-div z-40">
+            <div class="fixed right-4 inset-y-1/3  h-16  blog-div z-40">
                <a href="{{url('login')}}">
                 <span class="fas fa-sign-in-alt text-2xl"></span></a>
             </div>
