@@ -9,7 +9,7 @@
     @endslot
 
     <div class="pt-16 lg:pt-20 space-y-2 h-full flex-1 ">
-        @if (count($services)){
+        @if (count($services))
             <div class="">
                 <div class="w-11/12 lg:w-9/12 mx-auto flex-1 space-y-2 items-center justify-center  bg-blue-200 bg-opacity-20 mb-4"
                     style="min-height: 40vh">
@@ -51,23 +51,28 @@
                             </select>
                         </div>
                     </div>
-                    <div class="lg:grid grid-flow-row grid-cols-3 gap-2 mx-auto  relative pb-4">
+                    <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mx-auto  relative pb-4">
     
                         @foreach ($services as $service)
                             @livewire('service-card', ['service' => $service], key($service->id))
     
                         @endforeach
                     </div>
-                    <div class="w-11/12 lg:w-8/12">
+                    <div class="w-11/12 lg:w-full">
                         {{ $services->links() }}
                     </div>
                 </div>
             </div>
-        }
              @else
         @livewire('lost-page') 
         @endif
-      
+        @if (Auth::check())
+        <div class="fixed right-4 inset-y-1/2">
+            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center" title="New Service">
+                <a href="{{route('newservice')}}"><span class="fas fa-plus"></span></a>
+            </div>
+        </div>
+     @endif
         <script>
             $(document).ready(function() {
                 $('#category').on('change',function(){

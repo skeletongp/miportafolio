@@ -75,7 +75,7 @@
             <div class="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
                 <!-- post cards -->
                 <div class="w-full lg:w-2/3 h-full ">
-
+                    {{$posts->links()}}
                     @foreach ($posts as $post)
                     @livewire('blog-card', ['post'=>$post])
                     @endforeach

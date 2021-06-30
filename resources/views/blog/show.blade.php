@@ -44,9 +44,10 @@
                 <!-- Barra de la derecha -->
                 <div class="w-full lg:w-1/3 px-3 bg-red-100 bg-opacity-40">
                     <!-- Temas destacados -->
-                    <div class="mb-4">
-                        <h5 class="font-bold text-lg uppercase text-gray-700 px-1 mb-2"> Temas destacados </h5>
-                        <ul>
+                    <h5 class="font-bold text-lg uppercase text-gray-700 px-1 mb-2"> Temas destacados </h5>
+
+                    <div class="mb-4 ">
+                        <ul class="">
                            @foreach ($topics as $topic)
                            <li
                            class="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
@@ -63,10 +64,12 @@
                     </div>
                     {{-- Fin de los temas destacados --}}
                     <!-- divider -->
-                    <div class="border border-dotted"></div>
-                    @foreach ($services as $service)
+                    <div class="border border-dotted "></div>
+                   <div class="overflow-auto" style="max-height: 46rem">
+                        @foreach ($services as $service)
                         @livewire('service-card', ['service' => $service])
                     @endforeach
+                   </div>
 
 
                 </div>
@@ -93,5 +96,10 @@
 
             })
         </script>
+        <style>
+             ::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
     </div>
 </x-app-layout>

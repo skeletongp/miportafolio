@@ -168,6 +168,10 @@ return [
         'topic_id'=>"Categoría",
         'keys'=>"Keywords",
         'extract'=>"Resumen",
+        'link'=>"Enlace",
+        'longname'=>"Resumen",
+        'shortname'=>"Nombre",
+        'type_id'=>"Categoría",
     ],
 
 ];

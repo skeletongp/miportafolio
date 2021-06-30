@@ -4,10 +4,10 @@
             <h2 class="font-bold text-xl text-gray-900 leading-tight mr-2 hidden lg:flex">
                 {{ __('Blog de Ismael') }}
             </h2>
-            <div class="flex">
+            <div class="flex w-max">
                 <form action="{{ route('post_search') }}" method="POST">
                     @csrf
-                    <x-jet-input type="search" placeholder="Buscar..." name="search">
+                    <x-jet-input type="search" placeholder="Buscar..." name="search" class="m-0">
 
                     </x-jet-input>
                     <x-jet-button><span class="fas fa-search"></span></x-jet-button>
@@ -76,7 +76,7 @@
             <div class="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
                 <!-- post cards -->
                 <div class="w-full lg:w-2/3 h-full ">
-
+                    {{$posts->links()}}
                     @foreach ($posts as $post)
                     @livewire('blog-card', ['post'=>$post])
                     @endforeach

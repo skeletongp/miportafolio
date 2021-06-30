@@ -15,11 +15,11 @@
                 <div
                     class="bg-white shadow-xl overflow-hidden rounded-xl py-8 px-8 lg:flex space-y-2 lg:space-y-0 w-11/12 lg:w-5/6 mx-auto">
                     <div class="lg:w-2/6 h-48 lg:h-96 flex items-center justify-center relative">
-                        <div class="w-36 h-36 lg:w-72 lg:h-72 bg-cover rounded-full mb-4"
+                        <div class="w-36 h-36 md:w-48 md:h-48 xl:w-72 xl:h-72 bg-cover rounded-full mb-4"
                             style="background-image:url('{{ asset('storage/ismael.png') }}')">
 
                         </div>
-                        <h1 class="absolute font-bold text-center bottom-0 uppercase text-xl lg:text-4xl">Este Soy Yo
+                        <h1 class="absolute font-bold text-center bottom-0 uppercase text-xl md:text-2xl xl:text-4xl">Este Soy Yo
                         </h1>
                     </div>
                     <div class="lg:w-4/6 h-96 inline p-3">

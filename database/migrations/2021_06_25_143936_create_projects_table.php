@@ -15,11 +15,12 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('shortname');
-            $table->string('longname');
-            $table->string('description');
+            $table->string('shortname',100);
+            $table->string('longname',255);
+            $table->text('description');
             $table->string('image');
             $table->string('link');
+            $table->tinyInteger('is_active');
             $table->timestamps();
         });
     }

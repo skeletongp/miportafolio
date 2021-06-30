@@ -43,12 +43,13 @@
     <x-jet-banner />
 
     <div class="min-h-screen ">
-        @livewire('navigation-menu')
+     
 
         <!-- Page Heading -->
         @if (isset($header))
             <header class="shadow ">
-                <div class=" px-4 mx-auto py-6 px-4 sm:px-6 lg:px-8 text-right bg-cover bg-top fixed w-full z-30 flex justify-end"
+                @livewire('navigation-menu')
+                <div class=" px-4 mx-auto {{Str::contains(Request::url(), 'blog')?'py-3':'py-6'}} px-4 sm:px-6 lg:px-8 text-right bg-cover bg-top fixed w-full z-30 flex justify-end"
                     style="background-image:url('https://images.unsplash.com/photo-1470811976196-8ee4fa278c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80')">
                     {{ $header }}
                    
@@ -59,7 +60,7 @@
         <main>
             {{ $slot }}
             <div class="flex fixed  bottom-2 right-1">
-                <a href="https://wa.me/message/VRCUBIBSD5RRN1" target="_blank"
+                <a href="https://api.whatsapp.com/send?phone=18493153337&text=." target="_blank"
                     class="tracking-wider text-green-600 bg-white border-2 border-green-600 px-3 py-1 text-xs lg:text-sm rounded leading-loose mx-2 font-semibold"
                     title="WhatsApp">
                     <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
@@ -96,11 +97,7 @@
                     </button>
                 </form>
             </div>
-            @else
-            <div class="fixed right-4 inset-y-1/3  h-16  blog-div z-40">
-               <a href="{{url('login')}}">
-                <span class="fas fa-sign-in-alt text-2xl"></span></a>
-            </div>
+           
             @endif
         </main>
     </div>

@@ -20,62 +20,68 @@
                 </h1>
             </div>
 
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 ">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
 
-                <div class="p-2 sm:p-10 text-center cursor-pointer">
+                <div class="p-2 sm:p-8 text-center cursor-pointer">
+                  <a href="{{route('services_search',['type'=>'academico'])}}">  <div
+                    class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-blue-50">
+                    <div class="space-y-10">
+                        <i class="fa fa-keyboard" style="font-size:48px;"></i>
+
+                        <div class="px-6 py-4">
+                            <div class="space-y-5">
+                                <div class="font-bold text-xl mb-2">Digitador</div>
+                                <p class="text-gray-700 text-base">
+                                    Con destrezas en el manejo de Microsoft Office (Word, Excel, Powerpoint, Visio) y numerosas
+                                    herramientas tecnológicas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+                </div>
+
+                <div class="p-2 sm:p-8 text-center cursor-pointer text-white">
+                    
+                   <a href="{{route('services_search',['type'=>'programacion'])}}">
                     <div
-                        class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500  bg-blue-50">
-                        <div class="space-y-10">
-                            <i class="fa fa-keyboard" style="font-size:48px;"></i>
-
-                            <div class="px-6 py-4">
-                                <div class="space-y-5">
-                                    <div class="font-bold text-xl mb-2">Digitador</div>
-                                    <p class="text-gray-700 text-base">
-                                        Con destrezas en el manejo de Microsoft Office (Word, Excel, Powerpoint, Visio) y numerosas
-                                        herramientas tecnológicas.
-                                    </p>
-                                </div>
+                    class="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 hover:bg-gray-900 transition duration-500">
+                    <div class="space-y-10">
+                        <i class="fa fa-code" style="font-size:48px;"></i>
+                        <div class="px-6 py-4">
+                            <div class="space-y-5">
+                                <div class="font-bold text-xl mb-2">Programador</div>
+                                <p class="text-base">
+                                    En desarrollo de páginas y app web con PHP, Javascript, HTML, CSS, así como
+                                    dominio de C#, Github, React, entre otros.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                   </a>
+                </div>
 
-                <div class="p-2 sm:p-10 text-center cursor-pointer text-white">
+                <div class="p-2 sm:p-8 text-center cursor-pointer ">   
+                    
+                   <a href="{{route('services_search',['type'=>'asesoria'])}}">
                     <div
-                        class="py-16 max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 hover:bg-gray-900 transition duration-500">
-                        <div class="space-y-10">
-                            <i class="fa fa-code" style="font-size:48px;"></i>
-                            <div class="px-6 py-4">
-                                <div class="space-y-5">
-                                    <div class="font-bold text-xl mb-2">Programador</div>
-                                    <p class="text-base">
-                                        En desarrollo de páginas y app web con PHP, Javascript, HTML, CSS, así como
-                                        dominio de C#, Github, React, entre otros.
-                                    </p>
-                                </div>
+                    class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-blue-50 ">
+                    <div class="space-y-10">
+                        <i class="fa fa-graduation-cap" style="font-size:48px;"></i>
+
+                        <div class="px-6 py-4">
+                            <div class="space-y-5">
+                                <div class="font-bold text-xl mb-2">Asesor</div>
+                                <p class="text-gray-700 text-base">
+                                    Asesoro todo tipo de trabajos académicos de manera independiente, así como
+                                    Tesis, Monografías y proyectos finales.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="p-2 sm:p-10 text-center cursor-pointer ">   
-                    <div
-                        class="py-16 max-w-sm rounded overflow-hidden shadow-lg hover:bg-white transition duration-500 bg-blue-50 ">
-                        <div class="space-y-10">
-                            <i class="fa fa-graduation-cap" style="font-size:48px;"></i>
-
-                            <div class="px-6 py-4">
-                                <div class="space-y-5">
-                                    <div class="font-bold text-xl mb-2">Asesor</div>
-                                    <p class="text-gray-700 text-base">
-                                        Asesoro todo tipo de trabajos académicos de manera independiente, así como
-                                        Tesis, Monografías y proyectos finales.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   </a>
                 </div>
 
             </div>

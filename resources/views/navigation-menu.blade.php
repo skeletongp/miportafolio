@@ -19,7 +19,7 @@
                         <div>SERVICIOS</div>
                     </span></a></li>
             <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>
-            <li class="menu-nav-item"><a class="menu-nav-link" href="{{ route('lost') }}"><span>
+            <li class="menu-nav-item"><a class="menu-nav-link" href="{{ route('projects') }}"><span>
                         <div>PROYECTOS</div>
                     </span></a></li>
             <div class="w-16 h-1 bg-white mt-2 divisor lg:mt-4 mx-auto mb-2 lg:mb-0"></div>

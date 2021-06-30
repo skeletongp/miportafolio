@@ -11,11 +11,12 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class BlogController extends Controller
 {
     use WithFileUploads;
-
+    use WithPagination;
     /* Página principal de los blogs */
     public function index()
     {
