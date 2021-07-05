@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::middleware(['auth:sanctum'])->get('/services/new', [HomeController::class, 'newservice'])->name('newservice');
+Route::middleware(['auth:sanctum'])->get('/migrate',  function ()
+{
+   Artisan::call('migrate');
+});
 Route::middleware(['auth:sanctum'])->post('/service/store', [HomeController::class, 'services_store'])->name('services_store');   
 Route::get('/services/{type}', [HomeController::class, 'services_search'])->name('services_search');
 Route::get('/service/{show}', [HomeController::class, 'services_show'])->name('services_show');

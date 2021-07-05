@@ -11,15 +11,24 @@
             <div class="max-w-xl m-4 mx-auto">
                 <img src="{{$post->image}}" alt="" class="rounded-xl">
             </div>
-            <div class="mt-2 max-h-80 lg:max-h-96 overflow-auto">
+            <div class="mt-2  lg:max-h-96 lg:overflow-auto">
                 <span id="span-content" class="mt-2 text-gray-900">{!! $post->description !!}</span>
             </div>
             <div class="lg:flex-1 items-center justify-between mt-4 text-xl">
-                <div>
+                <div >
                     <span class="flex items-center">
                         <img src="https://res.cloudinary.com/dboafhu31/image/upload/v1624813664/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512_djffio.png"
                             alt="avatar" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
                         <h1 class="font-bold text-gray-700 select-none">{{ $post->autor->name }}</h1>
+                        <div class="ml-auto">
+                            <small class="text-right ml-auto"> <span class="fas fa-eye text-green-500"></span><span class="bg-gray-100 px-2 rounded-xl">{{$views}}</span></small>
+                        <small class="text-right ml-auto"> 
+                            <span class="fas fa-thumbs-up text-blue-500 {{$is_liked?'':'cursor-pointer'}}" wire:click="{{$is_liked?'':'like'}}">
+                            </span>
+                            <span class="bg-gray-100 px-2 rounded-xl" >{{$likes}}
+                            </span>
+                        </small>
+                        </div>
                     </span>
                 </div>
                     <div class="grid gap-1 grid-cols-3 lg:grid-cols-5 mt-1">

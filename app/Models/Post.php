@@ -25,4 +25,12 @@ class Post extends Model
     {
         return 'slug';
     }
+    public function views()
+    {
+       return $this->hasMany(View::class);
+    }
+    public function likes()
+    {
+       return $this->hasMany(Like::class);
+    }
 }

@@ -7,7 +7,7 @@
             <div class="flex">
                 <form action="{{ route('post_search') }}" method="POST">
                     @csrf
-                    <x-jet-input type="search" placeholder="Buscar..." name="search">
+                    <x-jet-input type="search" placeholder="Buscar..." name="search" required>
 
                     </x-jet-input>
                     <x-jet-button><span class="fas fa-search"></span></x-jet-button>

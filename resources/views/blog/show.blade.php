@@ -7,7 +7,7 @@
             <div class="flex">
                 <form action="{{ route('post_search') }}" method="POST">
                     @csrf
-                    <x-jet-input type="search" placeholder="Buscar..." name="search">
+                    <x-jet-input type="search" placeholder="Buscar..." name="search" required>
 
                     </x-jet-input>
                     <x-jet-button><span class="fas fa-search"></span></x-jet-button>
@@ -35,8 +35,9 @@
             <div class="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
                 <!-- post cards -->
                 <div class="w-full lg:w-2/3 h-full ">
-                    <h1 class="font-bold uppercase  text-xl lg:text-4xl">{{$post->title}}</h1>
-                    @livewire('post-card', ['post'=>$post])
+                    <h1 class="font-bold uppercase  text-xl lg:text-4xl sticky">{{$post->title}}</h1>
+                    
+                    @livewire('post-card', ['post'=>$post, 'views'=>$views->count(), 'is_view'=>$is_view])
 
 
                 </div>

@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('longname',255);
             $table->text('description');
             $table->string('image');
+            $table->string('slug');
             $table->string('link');
             $table->tinyInteger('is_active');
             $table->timestamps();

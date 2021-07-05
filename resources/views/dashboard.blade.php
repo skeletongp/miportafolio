@@ -28,10 +28,12 @@
                     </div>
                     <h2 class="text-white text-xl py-2 uppercase font-bold w-max bg-gray-900 mx-auto p-4 rounded-xl">
                         {{ $category->name }}</h2>
-                        <a href="{{route('newskill', ['category'=>$category->id])}}"  
+                       @if (Auth::check())
+                       <a href="{{route('newskill', ['category'=>$category->id])}}"  
                         class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center absolute right-1 top-1">
                             <span class="fas fa-plus text-xl"></span>
                         </a>
+                       @endif
                     @if ($category->skills)
 
                         <div class="grid grid-flow-row grid-cols-2 grid-rows-1 gap-1 mt-8">

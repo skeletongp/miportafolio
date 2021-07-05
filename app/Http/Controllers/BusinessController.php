@@ -105,7 +105,7 @@ class BusinessController extends Controller
         return view('business.newskill', compact('categories', 'cat_id'));
     }
     public $skill_rules = [
-        'title' => 'required|max:40',
+        'title' => 'required|max:40o',
         'image' => 'required',
         'category_id' => 'required',
         'level' => 'required',
