@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendPostJob;
 use App\Models\Category;
 use App\Models\Label;
 use App\Models\LabelPost;
@@ -31,7 +32,7 @@ class BlogController extends Controller
             $services = Service::get()->random(4);
         }
         if ($posts->count()) {
-            $post_1 = Post::where('is_active', '=', 1)->get()->random();
+            $post_1 = Post::where('is_active', '=', 1)->orderBy('created_at','desc')->first();
             $post_2 = Post::where('is_active', '=', 1)->where('id', '!=', $post_1->id)->get()->random();
         }
         return view('blog.index', compact('posts', 'post_1', 'post_2', 'topics', 'services'));
@@ -176,9 +177,10 @@ class BlogController extends Controller
                 $label_post->save();
             }
         }
+        SendPostJob::dispatch();
         return redirect()->route('blog');
     }
-    /* Permite ingresar un nuevo post */
+    /* Permite editar un nuevo post */
     public function edit(Post $post, Request $request)
     {
         $this->validate($request, $this->rules2);

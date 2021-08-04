@@ -59,25 +59,31 @@
         <!-- Page Content -->
         <main>
             {{ $slot }}
-            <div class="flex fixed  bottom-2 right-1">
-                <a href="https://api.whatsapp.com/send?phone=18493153337&text=." target="_blank"
-                    class="tracking-wider text-green-600 bg-white border-2 border-green-600 px-3 py-1 text-xs lg:text-sm rounded leading-loose mx-2 font-semibold"
-                    title="WhatsApp">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-                </a>
+                <div class="flex fixed  bottom-2 right-1">
+                    <a href="{{route('subscribe')}}" 
+                        class="tracking-wider text-red-600 bg-white border-2 border-red-600 px-3 py-1 text-md lg:text-sm rounded leading-loose mx-2 font-semibold"
+                        title="Suscribirme">
+                    <span class="fas fa-plus"></span>  
+                    </a>
 
-                <a href="https://www.facebook.com/Ismael-Digitador-105508274847069" target="_blank"
-                    class="tracking-wider text-blue-600 bg-white border-2 border-blue-600 px-3 py-1 text-xs lg:text-sm rounded leading-loose mx-2 font-semibold"
-                    title="Facebook">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i> Facebook
-                </a>
+                    <a href="https://api.whatsapp.com/send?phone=18493153337&text=." target="_blank"
+                        class="tracking-wider text-green-600 bg-white border-2 border-green-600 px-3 py-1 text-md lg:text-sm rounded leading-loose mx-2 font-semibold"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> 
+                    </a>
 
-                <a href="https://www.linkedin.com/in/ismael-contreras-michel-77b190211/" target="_blank"
-                    class="tracking-wider text-blue-600 bg-white border-2 border-blue-600 px-3 py-1 text-xs lg:text-sm rounded leading-loose mx-2 font-semibold"
-                    title="LinkedInd">
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
-                </a>
-            </div>
+                    <a href="https://www.facebook.com/Ismael-Digitador-105508274847069" target="_blank"
+                        class="tracking-wider text-blue-600 bg-white border-2 border-blue-600 px-3 py-1 text-md lg:text-sm rounded leading-loose mx-2 font-semibold"
+                        title="Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i> 
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ismael-contreras-michel-77b190211/" target="_blank"
+                        class="tracking-wider text-blue-600 bg-white border-2 border-blue-600 px-3 py-1 text-md lg:text-sm rounded leading-loose mx-2 font-semibold"
+                        title="LinkedInd">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i> 
+                    </a>
+                </div>
             <div class="fixed right-1 top-24 lg:top-28 blog-div z-20">
                 <a href="{{ route('blog') }}"
                     class="tracking-wider text-red-600 bg-white border-2 border-blue-600 px-1 py-1 text-xl lg:text-2xl rounded leading-loose mx-2 font-bold"
@@ -119,5 +125,5 @@
     </style>
     
 </body>
-
+{{-- <script>alert ('Ya estás registrado en este sitio');window.location.replace('ismaeldigitador.com/blog')</script> --}}
 </html>

@@ -7,6 +7,15 @@
     @slot('title')
         Home
     @endslot
+    @if (isset($msg))
+        <x-jet-dialog-modal>
+            <x-slot name="title"></x-slot>
+            <x-slot name="content">
+                <h1  class="text-center text-sm">{{$msg}}</h1>
+            </x-slot>
+            <x-slot name="footer"></x-slot>
+        </x-jet-dialog-modal>
+    @endif
     <div class="pb-12 pt-16 lg:pt-20 space-y-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-xl sm:rounded-lg sm:mx-2 rounded-xl">
