@@ -47,8 +47,8 @@ class BlogController extends Controller
         $topics = Topic::paginate(5);
         $services = Service::get()->random(4);
         if ($posts->count()) {
-            $post_1 = Post::where('is_active', '=', 1)->get()->random();
-            $post_2 = Post::where('is_active', '=', 1)->where('id', '!=', $post_1->id)->get()->random();
+            $post_1 = Post::where('is_active', '=', 1)->where('topic_id','=', $category->id)->get()->random();
+            $post_2 = Post::where('is_active', '=', 1)->where('topic_id','=', $category->id)->where('id', '!=', $post_1->id)->get()->random();
         }
         return view('blog.categories', compact('posts', 'post_1', 'post_2', 'topics', 'services'));
     }
@@ -56,6 +56,7 @@ class BlogController extends Controller
     public function show(Post $post)
     {
         $topics = Topic::paginate(5);
+
         $services = Service::get()->random(4);
         $ip = $this->get_client_ip();
         $view = new View();
@@ -95,11 +96,8 @@ class BlogController extends Controller
         $search = $request->search;
         $post_1 = [];
         $post_2 = [];
-        $posts = Post::where('is_active', '=', 1)
-            ->where('title', 'like', '%' . $search . '%')
-            ->orWhere('description', 'like', '%' . $search . '%')
-            ->orWhere('extract', 'like', '%' . $search . '%')
-            ->orderBy('id', 'desc')->paginate(6);
+        $posts = Post::search($search)->where('is_active', '=', 1)
+            ->paginate(6);
         $topics = Topic::paginate(5);
         $services = [];
         if (Service::all()->count()) {

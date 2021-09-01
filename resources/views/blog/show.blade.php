@@ -5,10 +5,8 @@
                 {{ $post->title }}
             </h2>
             <div class="flex">
-                <form action="{{ route('post_search') }}" method="POST">
-                    @csrf
-                    <x-jet-input type="search" placeholder="Buscar..." name="search" required>
-
+                <form action="{{ route('post_search') }}" method="get">
+                    <x-jet-input type="search" placeholder="Buscar..." name="search" value="{{request('search')}}" >
                     </x-jet-input>
                     <x-jet-button><span class="fas fa-search"></span></x-jet-button>
                 </form>
@@ -18,7 +16,7 @@
     @slot('title')
         Blog
     @endslot
-    <div class="pt-16 lg:pt-24 space-y-2 h-full flex-1 flex-1 justify-center w-full">
+    <div class="pt-16 lg:pt-24 space-y-2 h-full flex-1  justify-center w-full">
         
             @slot('og')
             <meta property="og:image" content="{{ $post->image }}">
@@ -52,7 +50,7 @@
                            @foreach ($topics as $topic)
                            <li
                            class="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                           <a href="#" class="flex items-center text-gray-600 cursor-pointer">
+                           <a href="{{ route('category', ['category' => $topic]) }}" class="flex items-center text-gray-600 cursor-pointer">
                                <span class="inline-block h-4 w-4 bg-green-300 mr-3"></span>
                                {{$topic->title}}
                                <span class="text-gray-500 ml-auto">{{$topic->posts->count()}} posts</span>

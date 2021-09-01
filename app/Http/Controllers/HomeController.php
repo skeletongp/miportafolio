@@ -30,7 +30,6 @@ class HomeController extends Controller
    }
    public function subscribed()
    {
-      dd('nada');
       try {
          $socialUser = Socialite::driver('google')->stateless()->user();
          $visitor = new Visitor();
@@ -43,6 +42,7 @@ class HomeController extends Controller
 
          echo "<script>alert ('Ya estás registrado en este sitio');window.location.href='http://ismaeldigitador.com/blog'</script>";
       }
+      $account=Socialite::driver('google')->stateless()->user()->id;
    }
    public function unsuscribe($visitor)
    {

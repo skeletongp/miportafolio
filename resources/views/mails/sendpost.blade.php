@@ -190,7 +190,7 @@
 
                                             <div class="bg-text">
 
-                                                <h2 style="padding: 15px 25px; width: 100%">
+                                                <h2 style="padding: 15px 25px; width: 500px !important">
                                                     {{ $post->title }}</h2>
                                             </div>
                                         </a>

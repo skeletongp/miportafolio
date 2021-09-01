@@ -92,7 +92,7 @@
                            @foreach ($topics as $topic)
                            <li
                            class="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300">
-                           <a href="#" class="flex items-center text-gray-600 cursor-pointer">
+                           <a href="{{ route('category', ['category' => $topic]) }}" class="flex items-center text-gray-600 cursor-pointer">
                                <span class="inline-block h-4 w-4 bg-green-300 mr-3"></span>
                                {{$topic->title}}
                                <span class="text-gray-500 ml-auto">{{$topic->posts->count()}} posts</span>

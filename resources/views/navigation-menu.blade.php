@@ -1,8 +1,10 @@
 <input type="checkbox" id="burger-toggle" >
-<label for="burger-toggle" class="burger-menu">
+<a href="{{route('home')}}" class="fixed mt-5 xl:mt-0 pt-1 left-1 w-6 sm:w-16 " style="z-index: 110 !important"><img src="{{asset('logo.png')}}" alt="" class=" "/></a>
+<label for="burger-toggle" class="burger-menu ml-5">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
+    
 </label>
 <div class="menu z-20" id="menu">
     <div class="menu-inner">
